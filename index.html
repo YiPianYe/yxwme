@@ -1,0 +1,64 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="description" content="">
+<title>Yxw</title>
+<style>
+*{margin:0px;padding:0px;border:0px;font-family:"Microsoft YaHei",'Open Sans';transition-duration:.5s}
+body{background-position:center 0px;background-size:cover;background-color:#333}img{border:0}a{text-decoration:none}
+.cl:after{content:".";display:block;height:0;clear:both;visibility:hidden}.cl{zoom:1}.z{float:left}.y{float:right}
+#nav{text-align:center;margin-top:5%}
+#nav .items{display:inline-block;border:1px solid #333;padding:20px 40px 20px 40px;background:rgba(0,0,0,.5);border-radius:10px;box-shadow:6px 6px 10px rgba(5,5,5,.5);color:#fff;text-shadow:1px 1px 0 #000}
+#nav .items h1 a{color:#fff;font-weight:bold;font-size:35px;line-height:50px}
+#nav .items .des{line-height:35px;margin-bottom:20px;font-size:18px}
+#nav .items .des a{font-weight:500;color:orange;text-decoration:underline}
+#nav .items .contact{display:inline-block;margin-top:-20px}
+@media(max-width:1200px){body{background-size:auto}}
+@media(max-width:600px){body{background-size:cover;background-attachment:fixed}}
+#large-header{position:relative;display:inline-block;width:100%}
+#demo-canvas{position:absolute;z-index:-1;top:0;left:0}
+.contact_email,.contact_qq,.contact_telegram{width:160px;height:40px;float:left;font-size:17px;font-family:Microsoft JhengHei;font-weight:300}
+.icon{width:23px;margin-right:3px;vertical-align: -webkit-baseline-middle}
+@media(max-width:600px){.contact_email,.contact_qq,.contact_telegram{float:none}}
+
+</head>
+<body>
+<div id="large-header">
+<canvas id="demo-canvas"></canvas>
+<div id="nav">
+  <div class="items">
+	<h1><a id="domain"></a></h1>
+	<div class="des">This domain is for sale!<br><a id="offer" target="_blank">Make an offer</a> or contact us:</div>
+		<div class="contact">
+			<div class="contact_email">
+				<img class="icon" src="/img/email.png"><a style="vertical-align: -webkit-baseline-middle;font-size: 19px;">ss@ss.hk</a>
+			</div>
+			<div class="contact_qq">
+				<img class="icon" src="/img/qq.png"><a style="vertical-align: -webkit-baseline-middle;">123456789</a>
+			</div>
+			<div class="contact_telegram">
+				<img class="icon" src="/img/tg.png"><a style="vertical-align: -webkit-baseline-middle;">@xiao_2077</a>
+			</div>
+		</div>
+	</div>
+</div>
+   <!-- 图片1-9-->
+<script>
+var img_num = Math.round( Math.random() *10).toString();
+window.onload=window.onresize=function(){
+	var w=document.body.clientWidth;
+	if(w>600){
+		vary('/pc_img/' + img_num + '.jpg',0)}
+	else{
+		vary('/phone_img/' + img_num + '.jpg',1)
+	}
+};
+function getid(id){return !id?null:document.getElementById(id)}
+function vary(a,b){var nav=getid('nav');nav.style.marginTop=(b==1)?'43%':'16%';var img=new Image();img.src=a;img.onload=function(){document.body.style.backgroundImage='url("'+a+'")'}}
+</script>
+</div>
+</body>
+</html>
