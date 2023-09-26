@@ -48,10 +48,10 @@ body{background-position:center 0px;background-size:cover;background-color:#333}
 				<img class="icon" src="./img/email.png"><a style="vertical-align: -webkit-baseline-middle;font-size: 19px;">ss@ss.hk</a>
 			</div>
 			<div class="contact_qq">
-				<img class="icon" src="./img/qq.png"><a style="vertical-align: -webkit-baseline-middle;">2543798104</a>
+				<img class="icon" src="/img/qq.png"><a style="vertical-align: -webkit-baseline-middle;">2543798104</a>
 			</div>
 			<div class="contact_telegram">
-				<img class="icon" src="./img/tg.png"><a style="vertical-align: -webkit-baseline-middle;">@xiao_2077</a>
+				<img class="icon" src="/img/tg.png"><a style="vertical-align: -webkit-baseline-middle;">@xiao_2077</a>
 			</div>
 		</div>
 	</div>
@@ -72,9 +72,9 @@ var img_num = Math.round( Math.random() *10).toString();
 window.onload=window.onresize=function(){
 	var w=document.body.clientWidth;
 	if(w>600){
-		vary('./pc_img/' + img_num + '.jpg',0)}
+		vary('/pc_img/' + img_num + '.jpg',0)}
 	else{
-		vary('./phone_img/' + img_num + '.jpg',1)
+		vary('/phone_img/' + img_num + '.jpg',1)
 	}
 };
 function getid(id){return !id?null:document.getElementById(id)}
